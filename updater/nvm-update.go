@@ -16,7 +16,7 @@ import (
 	"golang.org/x/sys/windows/registry"
 )
 
-var version = "1.1.11"
+var version = "1.1.13"
 
 func main() {
 	// baseVersion := version
@@ -78,7 +78,7 @@ func main() {
 	fsutil.Touch(tmpdir)
 
 	fmt.Println("Downloading NVM for Windows v" + version)
-	success := web.Download("https://github.com/coreybutler/nvm-windows/releases/download/"+version+"/nvm-noinstall.zip", zipfile)
+	success := web.Download("https://github.com/aaron777collins/nvm-windows/releases/download/"+version+"/nvm-noinstall.zip", zipfile)
 	if !success {
 		os.RemoveAll(tmpdir)
 		os.Exit(1)
